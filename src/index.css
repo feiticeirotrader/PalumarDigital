@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    color: #1565C0;
+    background-color: #F6F0E5;
+    background-image: url('/Base1.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .wallpaper-page {
+    padding-top: clamp(220px, 32vh, 300px);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(21, 101, 192, 0.15);
+  border-radius: 9999px;
+}
