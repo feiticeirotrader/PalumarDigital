@@ -106,16 +106,30 @@ export function WifiSection({ isOpen, onToggle }: SectionProps) {
 
 export function LocalizacaoSection({ isOpen, onToggle }: SectionProps) {
   const { title, subtitle, Icon, iconColor } = useMeta('localizacao');
+
   return (
-    <Accordion id="localizacao" title={title} subtitle={subtitle} icon={Icon} iconColor={iconColor} isOpen={isOpen} onToggle={onToggle}>
+    <Accordion
+      id="localizacao"
+      title={title}
+      subtitle={subtitle}
+      icon={Icon}
+      iconColor={iconColor}
+      isOpen={isOpen}
+      onToggle={onToggle}
+    >
       <div className="space-y-3">
-        <InfoRow label="Praia" value="Praia dos Carneiros" />
-        <InfoRow label="Cidade" value="Tamandaré" />
+        <InfoRow label="Hospedagem" value="PALUMAR Flats" />
+        <InfoRow label="Cidade" value="Tamandaré - PE" />
       </div>
-      <a href={mapsLink + encodeURIComponent('Praia dos Carneiros, Tamandaré, PE')} target="_blank" rel="noopener noreferrer">
+
+      <a
+        href="https://maps.app.goo.gl/1QKXGUtw7Kq7qhZz9"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Button>
           <ExternalLink className="h-4 w-4" strokeWidth={2} />
-          Abrir Google Maps
+          Traçar rota no Google Maps
         </Button>
       </a>
     </Accordion>
